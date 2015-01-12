@@ -1,4 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        // Android-APTプラグイン
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.+'
+    }
+}
 
 android {
     compileSdkVersion 21
@@ -21,5 +32,13 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    // android support library v4
+    // compile "com.android.support:support-v4:20.0.+"
+    // Android Annotations
+    apt 'org.androidannotations:androidannotations:3.0.1'
+    compile 'org.androidannotations:androidannotations:3.0.1'
+    // Volley
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    // AppCompat
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
