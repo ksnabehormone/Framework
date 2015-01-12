@@ -1,8 +1,24 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!-- 全体に共通するstyle -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!-- the theme applied to the application or activity -->
+    <style name="RedActionBarTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/RedActionBar</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/RedActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="RedActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/red</item>
+        <!-- SupporLibrary用 -->
+        <item name="background">@color/red</item>
     </style>
 
 </resources>

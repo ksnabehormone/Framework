@@ -1,39 +1,53 @@
 package factory.nickel.framework;
 
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+
+import factory.nickel.framework.activity.AbstractActivity;
+import factory.nickel.framework.activity.VolleySampleActivity_;
+
+@EActivity(R.layout.activity_main)
+public class MainActivity extends AbstractActivity {
 
 
-public class MainActivity extends ActionBarActivity {
+    @ViewById(R.id.layout_main_list)
+    protected LinearLayout list;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void init() {
+        addButton("Vollyサンプル", VolleySampleActivity_.class);
+
+
+    }
+
+    /**
+     * 画面遷移 ※manifest忘れずに
+     *
+     * @param forwardTo
+     */
+    private void forward(final Class<?> forwardTo) {
+        Intent intent = new Intent(MainActivity.this, forwardTo);
+        startActivity(intent);
+    }
+
+    private void addButton(String title, final Class<?> forwardTo) {
+        Button view = new Button(this);
+        view.setText(title);
+        view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forward(forwardTo);
+            }
+        });
+        list.addView(view);
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

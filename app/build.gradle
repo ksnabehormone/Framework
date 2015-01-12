@@ -35,10 +35,19 @@ dependencies {
     // android support library v4
     // compile "com.android.support:support-v4:20.0.+"
     // Android Annotations
-    apt 'org.androidannotations:androidannotations:3.0.1'
-    compile 'org.androidannotations:androidannotations:3.0.1'
+    apt 'org.androidannotations:androidannotations:3.0+'
+    compile 'org.androidannotations:androidannotations:3.0+'
     // Volley
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     // AppCompat
     compile 'com.android.support:appcompat-v7:21.0.3'
+}
+
+apt {
+    arguments {
+        // Gradleの仕様変更で不要に
+        // androidManifestFile variant.processResources.manifestFile
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        resourcePackageName "factory.nickel.framework"
+    }
 }
