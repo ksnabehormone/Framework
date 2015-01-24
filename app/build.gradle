@@ -39,8 +39,12 @@ dependencies {
     compile 'org.androidannotations:androidannotations:3.0+'
     // Volley
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    // Gson
+    compile 'com.google.code.gson:gson:2.2.+'
     // AppCompat
     compile 'com.android.support:appcompat-v7:21.0.3'
+    // Google Play Service
+    compile 'com.google.android.gms:play-services:+'
 }
 
 apt {

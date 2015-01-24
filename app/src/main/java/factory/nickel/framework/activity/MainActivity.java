@@ -1,4 +1,4 @@
-package factory.nickel.framework;
+package factory.nickel.framework.activity;
 
 import android.content.Intent;
 import android.view.View;
@@ -8,8 +8,7 @@ import android.widget.LinearLayout;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
-import factory.nickel.framework.activity.AbstractActivity;
-import factory.nickel.framework.activity.VolleySampleActivity_;
+import factory.nickel.framework.R;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends AbstractActivity {
@@ -20,8 +19,6 @@ public class MainActivity extends AbstractActivity {
 
     @Override
     public void init() {
-        addButton("Vollyサンプル", VolleySampleActivity_.class);
-
 
     }
 

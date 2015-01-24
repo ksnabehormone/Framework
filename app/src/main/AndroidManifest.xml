@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="factory.nickel.framework">
+    package="factory.nickel.framework" >
 
     <!-- ネット通信 -->
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/RedActionBarTheme">
-
-
+        android:theme="@style/RedActionBarTheme" >
         <activity
-            android:name="factory.nickel.framework.MainActivity_"
-            android:label="@string/app_name">
+            android:name=".activity.MainActivity_"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="factory.nickel.framework.activity.VolleySampleActivity_"
-            android:label="@string/title_activity_volley_sample"></activity>
+
     </application>
 
 </manifest>
