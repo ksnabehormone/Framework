@@ -19,8 +19,9 @@ public class MainActivity extends AbstractActivity {
 
     @Override
     public void init() {
-
+		addButton("Retrofitサンプル", RetrofitActivity_.class);
     }
+
 
     /**
      * 画面遷移 ※manifest忘れずに

@@ -49,6 +49,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     // Google Play Service
     compile 'com.google.android.gms:play-services:+'
+    // Retrofit
+    compile 'com.squareup.retrofit:retrofit:1.6.1'
 }
 
 apt {

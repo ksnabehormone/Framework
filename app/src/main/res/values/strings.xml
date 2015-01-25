@@ -7,5 +7,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_gps">GpsActivity</string>
     <string name="title_activity_suggest">SuggestActivity</string>
+    <string name="title_activity_retrofit">RetrofitActivity</string>
 
 </resources>
