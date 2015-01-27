@@ -25,6 +25,18 @@
             android:name=".activity.RetrofitActivity_"
             android:label="@string/title_activity_retrofit" >
         </activity>
+        <activity
+            android:name=".activity.ImageLoaderActivity_"
+            android:label="@string/title_activity_uil" >
+        </activity>
+        <activity
+            android:name=".activity.OkHttpActivity_"
+            android:label="@string/title_activity_ok_http" >
+        </activity>
+        <activity
+            android:name=".activity.PicassoActivity_"
+            android:label="@string/title_activity_picasso" >
+        </activity>
     </application>
 
 </manifest>
