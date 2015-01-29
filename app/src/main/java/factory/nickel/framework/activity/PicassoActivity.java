@@ -18,6 +18,9 @@ public class PicassoActivity extends AbstractActivity {
 
 	@Override
 	public void init() {
+		/**
+		 * with:downloader,cache,requesttransfarを初期化
+		 */
 		Picasso.with(this).load(MockUtils.MOCK_IMAGE)
 				.resize(100, 100)
 				.centerCrop()

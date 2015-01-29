@@ -9,5 +9,5 @@
     <string name="title_activity_retrofit">RetrofitActivity</string>
     <string name="title_activity_ok_http">OkHttpActivity</string>
     <string name="title_activity_picasso">PicassoActivity</string>
-
+    <string name="title_activity_glide">GlideActivity</string>
 </resources>
