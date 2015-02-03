@@ -41,6 +41,10 @@
             android:name=".activity.GlideActivity_"
             android:label="@string/title_activity_picasso" >
         </activity>
+        <activity
+            android:name=".activity.PagerSlidingTabActivity_"
+            android:label="@string/title_activity_picasso" >
+        </activity>
     </application>
 
 </manifest>

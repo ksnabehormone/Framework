@@ -24,6 +24,7 @@ public class MainActivity extends AbstractActivity {
 		addButton("OkHttpサンプル", OkHttpActivity_.class);
 		addButton("Picassoサンプル", PicassoActivity_.class);
 		addButton("Glideサンプル", GlideActivity_.class);
+		addButton("PagerSlidingTabサンプル", PagerSlidingTabActivity_.class);
 	}
 
 
